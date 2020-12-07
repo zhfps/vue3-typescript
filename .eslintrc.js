@@ -21,6 +21,10 @@ module.exports = {
     }],
     'import/no-unresolved': 0,
     'import/extensions': 0,
-    'linebreak-style': ['off', 'windows']
+    'linebreak-style': ['off', 'windows'],
+    'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
+    'no-underscore-dangle': ["error", { "allow": ["foo_", "_data"] }],
+     'camelcase': "off",
+     '@typescript-eslint/camelcase': ["error"]
   }
 };
