@@ -16,4 +16,4 @@ const listData = function () {
   return { _data }
 }
 // url为要拦截的请求地址  请求方式  请求数据（规则） （此处api会被mockjs拦截）
-Mock.mock('http://127.0.0.1:8080/test', 'get', listData())
+Mock.mock('http://localhost:2345/test', 'post', listData())

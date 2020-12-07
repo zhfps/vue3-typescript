@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import axios from 'axios'
+import { login } from '@/api/user'
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'Home',
@@ -20,7 +20,7 @@ export default defineComponent({
   },
   methods: {
     getTest() {
-      axios.get('http://127.0.0.1:8080/test').then((res) => {
+      login().then((res) => {
         console.log(res)
       })
     }
