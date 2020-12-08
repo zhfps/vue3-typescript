@@ -1,5 +1,5 @@
 import { createStore } from 'vuex';
-
+import Test from './modules/Test'
 export default createStore({
   state: {
   },
@@ -8,5 +8,6 @@ export default createStore({
   actions: {
   },
   modules: {
+    Test
   }
 });

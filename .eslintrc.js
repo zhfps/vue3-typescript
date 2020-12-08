@@ -10,7 +10,7 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'semi': [0, 'never'],
+    semi: [0, 'never'],
     'import/newline-after-import': 0,
     'comma-dangle': ['error', {
       arrays: 'never',
@@ -24,8 +24,8 @@ module.exports = {
     'linebreak-style': ['off', 'windows'],
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'no-underscore-dangle': ['error', { allow: ['foo_', '_data'] }],
-    'camelcase': 'off',
+    camelcase: 'off',
     '@typescript-eslint/camelcase': ['error'],
-    'implicit-arrow-linebreak': ["error", "beside"]
+    'implicit-arrow-linebreak': ['error', 'beside']
   }
 };

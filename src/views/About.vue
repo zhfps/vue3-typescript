@@ -1,9 +1,38 @@
 <template>
   <div class="about">
-    <el-button type="primary">主要按钮</el-button>
-  <el-button type="success">成功按钮</el-button>
-  <el-button type="info">信息按钮</el-button>
-  <el-button type="warning">警告按钮</el-button>
-  <el-button type="danger">危险按钮</el-button>
-  </div>
+    <el-button type="primary" @click="handleSetTest">主要按钮</el-button>
+    <div>{{test}}</div>
+   </div>
 </template>
+<script lang="ts">
+import { login } from '@/api/user'
+import { defineComponent } from 'vue'
+import { mapActions, mapGetters } from 'vuex'
+export default defineComponent({
+  name: 'Home',
+  data() {
+    return {}
+  },
+  computed: {
+    ...mapGetters({
+      test: 'Test/test'
+    })
+  },
+  created() {
+    this.getTest()
+  },
+  methods: {
+    ...mapActions({
+      setTest: 'Test/setTest'
+    }),
+    getTest() {
+      login().then((res) => {
+        console.log(res)
+      })
+    },
+    handleSetTest() {
+      this.setTest('xx')
+    }
+  }
+});
+</script>
