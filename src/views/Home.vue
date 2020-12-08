@@ -1,28 +1,24 @@
 <template>
   <div class="home">
     <div class="buttons">
-      <button class="button is-primary">Primary</button>
-      <button class="button is-link">Link</button>
+      <button class="button is-primary" @click="add">Primary</button>
+      {{id}}
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { login } from '@/api/user'
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 export default defineComponent({
   name: 'Home',
-  components: {
-
-  },
-  created() {
-    this.getTest()
-  },
-  methods: {
-    getTest() {
-      login().then((res) => {
-        console.log(res)
-      })
+  setup() {
+    const id = ref(0)
+    const add = () => {
+      id.value += 1
+    }
+    return {
+      id,
+      add
     }
   }
 });

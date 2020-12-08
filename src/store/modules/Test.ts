@@ -3,8 +3,8 @@ interface State {
   id: number;
 }
 
-const state: State = {
-  test: '',
+const Test: State = {
+  test: 'test',
   id: 0
 }
 
@@ -33,7 +33,7 @@ const actions = {
 
 export default {
   namespaced: true,
-  state,
+  state:Test,
   getters,
   mutations,
   actions
