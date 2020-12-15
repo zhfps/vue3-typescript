@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.aside {
+  height: 100%;
+  width: 100%;
+  background-color: #545c64;
+  .menu {
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+
+.header {
+  width: 100%;
+  background-color: #545c64;
+}
+
+// 覆盖
+
+.el-menu {
+  border-right: none;
+}

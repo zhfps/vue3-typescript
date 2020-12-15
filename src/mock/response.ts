@@ -4,5 +4,5 @@
 export interface IResponse{
   code: number;
   data: unknown;
-  error: string;
+  error: string|null;
 }
