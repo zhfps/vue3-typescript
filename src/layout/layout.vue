@@ -1,22 +1,22 @@
 <template>
 <el-container>
-  <el-aside class="aside" style="width: 220px;">
-    <Aside/>
+   <el-header class="header" height="44px">
+     <Header :icon="icon" @change-icon="ChangeIcon"/>
+    </el-header>
+  <el-aside class="aside" :style="{width}">
+    <Aside :isCollapse="isCollapse"/>
   </el-aside>
   <el-container>
-    <el-header class="header" height="44px">
-     <Header icon="el-icon-s-fold"/>
-    </el-header>
     <el-main>
        <router-view/>
     </el-main>
-    <el-footer>Footer</el-footer>
+    <el-footer>{{icon}}</el-footer>
   </el-container>
 </el-container>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script lang="ts">
+import { defineComponent, setup, ref } from 'vue'
 import Header from './header/header.vue'
 import Aside from './aside/aside.vue'
 import './layout.scss'
@@ -25,6 +25,27 @@ export default defineComponent({
   components: {
     Header,
     Aside
+  },
+  setup() {
+    const isCollapse = ref(false)
+    const width = ref('220px')
+    const icon = ref('el-icon-s-fold icon')
+    const ChangeIcon = (e: string) => {
+      if (e === 'el-icon-s-fold icon') {
+        icon.value = 'el-icon-s-unfold icon'
+        width.value = '64px'
+      } else {
+        icon.value = 'el-icon-s-fold icon'
+        width.value = '220px'
+      }
+      isCollapse.value = !isCollapse.value
+    }
+    return {
+      isCollapse,
+      width,
+      icon,
+      ChangeIcon
+    }
   }
 })
 </script>

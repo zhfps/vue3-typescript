@@ -23,6 +23,18 @@ body {
   height: 44px;
   line-height: 44px;
   text-align: center;
+  .logo {
+    float: left;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    img {
+      height: 40px;
+      padding: 2px;
+    }
+  }
   .icon {
     float: left;
     height: 44px;

@@ -2,6 +2,7 @@
   <div class="aside-container">
     <el-menu
       :uniqueOpened="true"
+      :collapse="isCollapse"
       mode="vertical"
       default-active="2"
       class="menu"
@@ -59,6 +60,12 @@
 <script>
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'Aside'
+  name: 'Aside',
+  props: {
+    isCollapse: {
+      type: Boolean,
+      required: true
+    }
+  }
 })
 </script>
