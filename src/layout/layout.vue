@@ -3,6 +3,7 @@
    <el-header class="header" height="44px">
      <Header :icon="icon" @change-icon="ChangeIcon"/>
     </el-header>
+    <el-container>
   <el-aside class="aside" :style="{width}">
     <Aside :isCollapse="isCollapse"/>
   </el-aside>
@@ -12,11 +13,12 @@
     </el-main>
     <el-footer>{{icon}}</el-footer>
   </el-container>
+    </el-container>
 </el-container>
 </template>
 
 <script lang="ts">
-import { defineComponent, setup, ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import Header from './header/header.vue'
 import Aside from './aside/aside.vue'
 import './layout.scss'

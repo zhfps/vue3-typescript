@@ -11,12 +11,20 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/home',
         name: 'Home',
-        component: Home
+        component: Home,
+        meta: {
+          icon: 'el-icon-house',
+          title: '首页'
+        }
       },
       {
         path: '/about',
         name: 'About',
-        component: () => import('../views/About.vue')
+        component: () => import('../views/About.vue'),
+        meta: {
+          icon: 'el-icon-setting',
+          title: '关于'
+        }
       }
     ]
   }
@@ -26,5 +34,9 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 });
+
+export function getRoutes(): Array<RouteRecordRaw> {
+  return routes
+}
 
 export default router;
