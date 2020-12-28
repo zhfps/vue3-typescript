@@ -26,6 +26,8 @@ module.exports = {
     'no-underscore-dangle': ['error', { allow: ['foo_', '_data'] }],
     camelcase: 'off',
     '@typescript-eslint/camelcase': ['error'],
-    'implicit-arrow-linebreak': ['error', 'beside']
+    'implicit-arrow-linebreak': ['error', 'beside'],
+    '@typescript-eslint/no-explicit-any': ['off'],
+    'no-irregular-whitespace': ['off']
   }
 };

@@ -33,7 +33,7 @@ const actions = {
 
 export default {
   namespaced: true,
-  state:Test,
+  state: Test,
   getters,
   mutations,
   actions

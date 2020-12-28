@@ -1,18 +1,19 @@
 <template>
 <el-container>
-   <el-header class="header" height="44px">
+    <el-header class="header" height="44px">
      <Header :icon="icon" @change-icon="ChangeIcon"/>
     </el-header>
     <el-container>
-  <el-aside class="aside" :style="{width}">
-    <Aside :isCollapse="isCollapse"/>
-  </el-aside>
-  <el-container>
-    <el-main>
-       <router-view/>
-    </el-main>
-    <el-footer>{{icon}}</el-footer>
-  </el-container>
+    <el-aside class="aside" :style="{width}">
+      <Aside :isCollapse="isCollapse"/>
+    </el-aside>
+    <el-container>
+      <Tags></Tags>
+      <el-main style="backgroun-color: #fff">
+        <router-view/>
+      </el-main>
+      <el-footer>{{icon}}</el-footer>
+    </el-container>
     </el-container>
 </el-container>
 </template>
@@ -21,12 +22,14 @@
 import { defineComponent, ref } from 'vue'
 import Header from './header/header.vue'
 import Aside from './aside/aside.vue'
+import Tags from './tags/tags.vue'
 import './layout.scss'
 export default defineComponent({
   name: 'layout',
   components: {
     Header,
-    Aside
+    Aside,
+    Tags
   },
   setup() {
     const isCollapse = ref(false)
