@@ -4,7 +4,7 @@
     <Tag title="关于" icon="el-icon-plus" path="/about" :active="true"></Tag>
     <el-dropdown class="left-top">
       <span class="el-dropdown-link">
-        <i class="el-icon-plus el-icon--right el-tag__close"></i>
+        <i class="el-icon-caret-bottom el-icon--right el-tag__close"></i>
       </span>
       <template #dropdown>
         <el-dropdown-menu>
